@@ -1,34 +1,25 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="UTF-8">
     <title>Zentone by nisrulz</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Zentone</h1>
-        <p>Android library to easily generate audio tone in android</p>
+    <section class="page-header">
+      <h1 class="project-name">Zentone</h1>
+      <h2 class="project-tagline">Android library to easily generate audio tone in android</h2>
+      <a href="https://github.com/nisrulz/zentone" class="btn">View on GitHub</a>
+      <a href="https://github.com/nisrulz/zentone/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/nisrulz/zentone/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-        <p class="view"><a href="https://github.com/nisrulz/zentone">View the Project on GitHub <small>nisrulz/zentone</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/nisrulz/zentone/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/nisrulz/zentone/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/nisrulz/zentone">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p><img src="https://github.com/nisrulz/zentone/raw/master/app/src/main/res/mipmap-xhdpi/ic_launcher.png" alt="logo"></p>
+    <section class="main-content">
+      <p><img src="https://github.com/nisrulz/zentone/raw/master/app/src/main/res/mipmap-xhdpi/ic_launcher.png" alt="logo"></p>
 
 <h1>
 <a id="zentone" class="anchor" href="#zentone" aria-hidden="true"><span class="octicon octicon-link"></span></a>ZenTone</h1>
@@ -42,20 +33,10 @@ ZenTone does all the heavy lifting for you.</p>
 <a id="integration" class="anchor" href="#integration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Integration</h1>
 
 <ul>
-<li>Include the below into your app's <strong><em>build.gradle</em></strong> right at the very bottom.</li>
+<li>Zentone is available in the MavenCentral, so getting it as simple as adding it as a dependency</li>
 </ul>
 
-<div class="highlight highlight-source-groovy-gradle"><pre><span class="pl-en">repositories</span> {
-    maven{
-        url <span class="pl-s"><span class="pl-pds">'</span>https://github.com/nisrulz/mavenrepo/raw/master/releases<span class="pl-pds">'</span></span>
-    }
-}</pre></div>
-
-<ul>
-<li>Next add the dependency</li>
-</ul>
-
-<div class="highlight highlight-source-groovy-gradle"><pre>compile <span class="pl-s"><span class="pl-pds">'</span>com.github.nisrulz:zentone:1.0.0<span class="pl-pds">'</span></span></pre></div>
+<div class="highlight highlight-source-groovy-gradle"><pre>compile <span class="pl-s"><span class="pl-pds">'</span>com.github.nisrulz:zentone:1.0.1<span class="pl-pds">'</span></span></pre></div>
 
 <h1>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
@@ -96,18 +77,34 @@ ZenTone does all the heavy lifting for you.</p>
 
 <div class="highlight highlight-source-java"><pre><span class="pl-smi">ZenTone</span><span class="pl-k">.</span>getInstance()<span class="pl-k">.</span>stop();</pre></div>
 
+<hr>
+
+<blockquote>
+<p><em>NOTE : Some variables used in build.gradle correspond to</em></p>
+
+<p><strong>COMPILE_SDK_VERSION</strong>=23</p>
+
+<p><strong>BUILDTOOLS_VERSION</strong>=23.0.1</p>
+
+<p><strong>VERSION_NAME</strong>=1.0.1</p>
+
+<p><strong>VERSION_CODE</strong>=3</p>
+</blockquote>
+
 <h1>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h1>
 
 <p><a href="http://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache License 2.0</a></p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/nisrulz">nisrulz</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/nisrulz/zentone">Zentone</a> is maintained by <a href="https://github.com/nisrulz">nisrulz</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-              <script type="text/javascript">
+
+    </section>
+
+            <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
