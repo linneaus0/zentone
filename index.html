@@ -36,7 +36,7 @@ ZenTone does all the heavy lifting for you.</p>
 <li>Zentone is available in the MavenCentral, so getting it as simple as adding it as a dependency</li>
 </ul>
 
-<div class="highlight highlight-source-groovy-gradle"><pre>compile <span class="pl-s"><span class="pl-pds">'</span>com.github.nisrulz:zentone:1.0.1<span class="pl-pds">'</span></span></pre></div>
+<div class="highlight highlight-source-groovy-gradle"><pre>compile <span class="pl-s"><span class="pl-pds">'</span>com.github.nisrulz:zentone:1.0.2<span class="pl-pds">'</span></span></pre></div>
 
 <h1>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
@@ -45,7 +45,12 @@ ZenTone does all the heavy lifting for you.</p>
 <li>To play a tone of certain frequency and duration</li>
 </ul>
 
-<div class="highlight highlight-source-java"><pre><span class="pl-smi">ZenTone</span><span class="pl-k">.</span>getInstance()<span class="pl-k">.</span>generate(freq, duration);</pre></div>
+<div class="highlight highlight-source-java"><pre><span class="pl-smi">ZenTone</span><span class="pl-k">.</span>getInstance()<span class="pl-k">.</span>generate(freq, duration, <span class="pl-k">new</span> <span class="pl-smi">ToneStoppedListener</span>() {
+      <span class="pl-k">@Override</span>
+      <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onToneStopped</span>() {
+          <span class="pl-c">// Do something when the tone has stopped playing</span>
+      }
+  });</pre></div>
 
 <p><em>where</em></p>
 
@@ -76,20 +81,6 @@ ZenTone does all the heavy lifting for you.</p>
 </ul>
 
 <div class="highlight highlight-source-java"><pre><span class="pl-smi">ZenTone</span><span class="pl-k">.</span>getInstance()<span class="pl-k">.</span>stop();</pre></div>
-
-<hr>
-
-<blockquote>
-<p><em>NOTE : Some variables used in build.gradle correspond to</em></p>
-
-<p><strong>COMPILE_SDK_VERSION</strong>=23</p>
-
-<p><strong>BUILDTOOLS_VERSION</strong>=23.0.1</p>
-
-<p><strong>VERSION_NAME</strong>=1.0.1</p>
-
-<p><strong>VERSION_CODE</strong>=3</p>
-</blockquote>
 
 <h1>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h1>
