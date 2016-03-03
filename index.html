@@ -22,7 +22,7 @@
       <p><img src="https://github.com/nisrulz/zentone/raw/master/app/src/main/res/mipmap-xhdpi/ic_launcher.png" alt="logo"></p>
 
 <h1>
-<a id="zentone" class="anchor" href="#zentone" aria-hidden="true"><span class="octicon octicon-link"></span></a>ZenTone</h1>
+<a id="zentone" class="anchor" href="#zentone" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ZenTone</h1>
 
 <p>Generating pure tone of an specific frequency was never that easy.
 ZenTone does all the heavy lifting for you.</p>
@@ -30,22 +30,22 @@ ZenTone does all the heavy lifting for you.</p>
 <p>Checkout the app using the same in <a href="https://play.google.com/store/apps/details?id=in.excogitation.library_zentone">Playstore</a></p>
 
 <h1>
-<a id="integration" class="anchor" href="#integration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Integration</h1>
+<a id="integration" class="anchor" href="#integration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Integration</h1>
 
 <ul>
 <li>Zentone is available in the MavenCentral, so getting it as simple as adding it as a dependency</li>
 </ul>
 
-<div class="highlight highlight-source-groovy-gradle"><pre>compile <span class="pl-s"><span class="pl-pds">'</span>com.github.nisrulz:zentone:1.0.2<span class="pl-pds">'</span></span></pre></div>
+<div class="highlight highlight-source-groovy-gradle"><pre>compile <span class="pl-s"><span class="pl-pds">'</span>com.github.nisrulz:zentone:1.0.3<span class="pl-pds">'</span></span></pre></div>
 
 <h1>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h1>
 
 <ul>
 <li>To play a tone of certain frequency and duration</li>
 </ul>
 
-<div class="highlight highlight-source-java"><pre><span class="pl-smi">ZenTone</span><span class="pl-k">.</span>getInstance()<span class="pl-k">.</span>generate(freq, duration, <span class="pl-k">new</span> <span class="pl-smi">ToneStoppedListener</span>() {
+<div class="highlight highlight-source-java"><pre><span class="pl-smi">ZenTone</span><span class="pl-k">.</span>getInstance()<span class="pl-k">.</span>generate(freq, duration, volume, <span class="pl-k">new</span> <span class="pl-smi">ToneStoppedListener</span>() {
       <span class="pl-k">@Override</span>
       <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onToneStopped</span>() {
           <span class="pl-c">// Do something when the tone has stopped playing</span>
@@ -73,6 +73,12 @@ ZenTone does all the heavy lifting for you.</p>
 <td><code>int</code></td>
 <td>seconds</td>
 </tr>
+<tr>
+<td>volume</td>
+<td><code>float</code></td>
+<td>ranging from <code>0.0f</code> to <code>1.0f</code>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -83,9 +89,22 @@ ZenTone does all the heavy lifting for you.</p>
 <div class="highlight highlight-source-java"><pre><span class="pl-smi">ZenTone</span><span class="pl-k">.</span>getInstance()<span class="pl-k">.</span>stop();</pre></div>
 
 <h1>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h1>
 
-<p><a href="http://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache License 2.0</a></p>
+<pre><code>Copyright 2016 Nishant Srivastava
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/nisrulz/zentone">Zentone</a> is maintained by <a href="https://github.com/nisrulz">nisrulz</a>.</span>
